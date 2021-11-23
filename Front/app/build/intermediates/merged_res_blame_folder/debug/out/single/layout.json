@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\home.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\home.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_set_username.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_set_username.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\chat_single_item.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\chat_single_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_chat_list.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_chat_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_detail.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\settings.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\normalpost_singleitem.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\normalpost_singleitem.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\post_single_item.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\post_single_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_news_page.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_news_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\profilesettings.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\profilesettings.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_first_page.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_first_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_mobile_num.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_mobile_num.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_verif_o_p_t.xml",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_verif_o_p_t.xml"
+    }
+]

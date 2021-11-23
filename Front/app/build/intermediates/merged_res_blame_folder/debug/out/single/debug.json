@@ -1,0 +1,298 @@
+[
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_background.png.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\background.png"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratboltitalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratboltitalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_keyboard_voice_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_keyboard_voice_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_home.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\home.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_chat_bubble_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_chat_bubble_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratthinitalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratthinitalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_verif_o_p_t.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_verif_o_p_t.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_box1.png.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\box1.png"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_back_ios_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_back_ios_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_vpn_key_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_vpn_key_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_save.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_save.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratlightitalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratlightitalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_chat_single_item.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\chat_single_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_round_message_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_round_message_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratblack.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratblack.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratmediumitalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratmediumitalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_chat_list.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_chat_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_post_single_item.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\post_single_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratbold.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratbold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_monteserratblackitalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\monteserratblackitalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_normalpost_singleitem.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\normalpost_singleitem.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_cancel_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_cancel_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_settings.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\color_text_input_outline_color.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\color\\text_input_outline_color.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_frameround.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\frameround.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_black_comments.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_black_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_shape.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\shape.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_image_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_image_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratitalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratitalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_onwhite.png.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\onwhite.png"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_set_username.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_set_username.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratsemibold.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratsemibold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_rocket.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_rocket.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\menu_menu.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\menu\\menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_news_page.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_news_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_detail.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_vr.jpg.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_vr.jpg"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratextrabolditalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratextrabolditalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratextrabold.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratextrabold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_profilesettings.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\profilesettings.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_profilepic.png.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\profilepic.png"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratthin.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratthin.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_first_page.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_first_page.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\anim_logoanimation.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\anim\\logoanimation.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_shape2.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\shape2.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_mirror1.png.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\mirror1.png"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_round_web_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_round_web_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_mobile_num.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\layout\\fragment_mobile_num.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_notifications_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_notifications_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratsemibolditalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratsemibolditalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_phone.jpg.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_phone.jpg"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon.png.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratextralightitalic.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratextralightitalic.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_help_24.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_baseline_help_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratmedium.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratmedium.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratextralight.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratextralight.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\drawable_adza.png.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\drawable\\adza.png"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratregular.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratregular.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\font_montserratlight.ttf.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\font\\montserratlight.ttf"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\chihe\\AndroidStudioProjects\\OnStage\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    }
+]

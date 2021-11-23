@@ -1,0 +1,74 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.onstage"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:5:5-34:19
+12        android:allowBackup="true"
+12-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\chihe\.gradle\caches\transforms-3\3287ed4cf8c32398866b0c1d2a55edb7\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@drawable/icon"
+15-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:7:9-38
+16        android:label="@string/app_name"
+16-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@drawable/icon"
+17-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:9:9-43
+18        android:supportsRtl="true"
+18-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:10:9-35
+19        android:testOnly="true"
+20        android:theme="@style/Theme.OnStage" >
+20-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:11:9-45
+21        <activity android:name="com.example.onstage.HomePageActivity" />
+21-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:12:9-13:67
+21-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:13:13-64
+22        <activity android:name="com.example.onstage.EditProfileActivity" />
+22-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:14:9-15:70
+22-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:15:13-67
+23        <activity
+23-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:16:9-19:39
+24            android:name="com.example.onstage.SettingsPageActivity"
+24-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:18:13-68
+25            android:exported="true"
+25-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:19:13-36
+26            android:theme="@style/Theme.OnStage" />
+26-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:17:13-49
+27        <activity
+27-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:20:9-23:39
+28            android:name="com.example.onstage.DetailActivity"
+28-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:22:13-62
+29            android:exported="true"
+29-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:23:13-36
+30            android:theme="@style/Theme.OnStage" />
+30-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:21:13-49
+31        <activity
+31-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:24:9-33:20
+32            android:name="com.example.onstage.MainActivity"
+32-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:26:13-41
+33            android:exported="true"
+33-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:27:13-36
+34            android:theme="@style/Theme.OnStage" >
+34-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:25:13-49
+35            <intent-filter>
+35-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:28:13-32:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:29:17-69
+36-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:29:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:31:17-77
+38-->C:\Users\chihe\AndroidStudioProjects\OnStage\app\src\main\AndroidManifest.xml:31:27-74
+39            </intent-filter>
+40        </activity>
+41    </application>
+42
+43</manifest>
