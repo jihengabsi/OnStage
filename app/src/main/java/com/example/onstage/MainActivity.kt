@@ -8,6 +8,8 @@ import com.example.onstage.data.Post
 import com.example.onstage.postList.PostAdapter
 import android.content.Intent
 import android.view.View
+import com.example.onstage.databinding.ActivityDetailBinding
+import com.example.onstage.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
             commit()
 
         }
+
 
     }
 

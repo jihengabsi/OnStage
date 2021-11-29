@@ -5,33 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/toosettings"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_baseline_cancel_24"
-            android:onClick="discardchanges"></ImageView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edit Profile"
-            android:textSize="18dp"
-            android:fontFamily="@font/montserratregular"
-            android:layout_marginLeft="10dp"/>
-        </LinearLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
 
 
 
@@ -58,6 +32,39 @@
 
             />
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toosettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_cancel_24"
+                    android:onClick="discardchanges"></ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit Profile"
+                    android:textSize="18dp"
+                    android:fontFamily="@font/montserratregular"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -236,5 +243,6 @@
 
         </LinearLayout>
     </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

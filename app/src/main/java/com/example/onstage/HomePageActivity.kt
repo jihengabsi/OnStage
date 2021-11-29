@@ -36,20 +36,17 @@ class HomePageActivity: AppCompatActivity() {
                 R.id.chat -> {
                     switchtoChat()
                 }
-                R.id.Onstageroom -> {
-                    MaterialAlertDialogBuilder(this)
-                        .setTitle("Don't Be Sad")
-                        .setMessage("We are working on it... STAY TUNED!")
-                        .setNegativeButton("Great") { dialog, which ->
-                            // Respond to negative button press
-                        }
-                        .show()
+                R.id.addpost -> {
+                    val intent = Intent(this, AddPostActivity::class.java)
+                    // start your next activity
+                    startActivity(intent)
 
                 }
             }
             false
         }
     }
+
     fun gosettings(view: android.view.View) {
         val intent = Intent(this, SettingsPageActivity::class.java)
         // start your next activity

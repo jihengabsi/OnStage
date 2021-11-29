@@ -5,9 +5,9 @@
         android:icon="@drawable/ic_round_web_24"
         android:title="News"/>
     <item
-        android:id="@+id/Onstageroom"
-        android:icon="@drawable/ic_baseline_keyboard_voice_24"
-        android:title="On Stage" />
+        android:id="@+id/addpost"
+        android:icon="@drawable/ic_baseline_add_circle_outline_24"
+        android:title="Add Post" />
     <item
         android:id="@+id/chat"
         android:icon="@drawable/ic_round_message_24"

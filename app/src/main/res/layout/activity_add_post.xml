@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        android:background="@color/white"
+        >
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/publish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratbold"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="Publish"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="20dp"
+
+            />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toosettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_cancel_24"
+                    app:tint="@color/black"></ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create Post"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserratregular"
+                    android:layout_marginLeft="10dp"/>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:outlineSpotShadowColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            >
+            <LinearLayout
+
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/profilepic"
+                    app:civ_border_color="@color/OnGreen"
+                    app:civ_border_width="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chiheb Chikhaoui"
+                        android:textSize="16dp"
+                        android:fontFamily="@font/montserratsemibold"
+                        android:textColor="@color/black"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/publicb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="37dp"
+                        android:drawableLeft="@drawable/ic_baseline_public_24"
+                        android:fontFamily="@font/montserratbold"
+                        android:text="Public"
+                        android:textColor="@color/lightgray"
+                        android:textSize="7dp"
+                        app:cornerRadius="20dp"
+                        app:strokeColor="@color/lightgray"
+                        android:backgroundTint="@color/white"
+                        app:strokeWidth="1dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="185dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="25dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:gravity="left|top"
+            android:hint="What's on your mind?"
+            android:inputType="textMultiLine"
+            android:textSize="24sp">
+
+            <requestFocus />
+
+        </EditText>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/OnGreen"
+            android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_image_24"
+            android:textSize="18dp"
+            android:text="Choose Image"
+            android:layout_gravity="center"
+            ></TextView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

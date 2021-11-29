@@ -10,21 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnStage">
         <activity
-            android:name="com.example.onstage.HomePageActivity" />
-        <activity
-            android:name="com.example.onstage.EditProfileActivity" />
-        <activity
-            android:theme="@style/Theme.OnStage"
-            android:name="com.example.onstage.SettingsPageActivity"
+            android:name=".AddPostActivity"
             android:exported="true" />
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".EditProfileActivity" />
         <activity
-            android:theme="@style/Theme.OnStage"
-            android:name="com.example.onstage.DetailActivity"
-            android:exported="true" />
+            android:name=".SettingsPageActivity"
+            android:exported="true"
+            android:theme="@style/Theme.OnStage" />
         <activity
-            android:theme="@style/Theme.OnStage"
+            android:name=".DetailActivity"
+            android:exported="true"
+            android:theme="@style/Theme.OnStage" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.OnStage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
