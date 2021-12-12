@@ -1,13 +1,17 @@
 package com.example.onstage
 
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 
 import androidx.annotation.NonNull
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.toColor
 
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
@@ -26,12 +30,16 @@ class HomePageActivity: AppCompatActivity() {
             replace(R.id.newsframe, fragmentnews)
             commit()
         }
+
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.navbar)
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.news -> {
+                    //item.setTitle(getResources().getString(R.string.app_name));
+
                     switchtoNews()
+
                 }
                 R.id.chat -> {
                     switchtoChat()
@@ -45,6 +53,9 @@ class HomePageActivity: AppCompatActivity() {
             }
             false
         }
+
+
+
     }
 
     fun gosettings(view: android.view.View) {

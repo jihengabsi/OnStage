@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onstage.R
 import com.example.onstage.DetailActivity
+import com.example.onstage.chatActivity
 import com.example.onstage.data.*
 
 class chatAdapter( val chatList: MutableList<Chat>) : RecyclerView.Adapter<chatHolder>() {
@@ -27,7 +28,7 @@ class chatAdapter( val chatList: MutableList<Chat>) : RecyclerView.Adapter<chatH
         holder.lastmessage.text = lastmessage
 
         holder.itemView.setOnClickListener{
-            val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+            val intent = Intent(holder.itemView.context, chatActivity::class.java)
             intent.apply {
                 putExtra(PICTURE, chatList[position].profilePic)
                 putExtra(NAME, profilename)

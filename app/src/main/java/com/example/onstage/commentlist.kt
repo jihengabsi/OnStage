@@ -4,9 +4,16 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.onstage.chatList.chatAdapter
+import com.example.onstage.commentList.commentAdapter
+import com.example.onstage.data.Chat
+import com.example.onstage.data.Comment
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.example.onstage.databinding.FragmentCommentlistBinding
+import kotlinx.android.synthetic.main.fragment_commentlist.*
 
 
 class commentlist : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
@@ -16,20 +23,23 @@ class commentlist : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
 
     private var currentState: Int = BottomSheetBehavior.STATE_EXPANDED
 
+    lateinit var recylcercomment: RecyclerView
+    lateinit var recylcercommentAdapter: commentAdapter
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment
         (activity as DetailActivity).setOnBottomSheetCallbacks(this)
+        // NOTE: fragments outlive their views!
+        //       One must clean up any references to the binging class instance here
 
         // Inflate the layout for this fragment
         _binding = FragmentCommentlistBinding.inflate(inflater, container, false)
+
         return binding.root
     }
-
-    // NOTE: fragments outlive their views!
-    //       One must clean up any references to the binging class instance here
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -49,6 +59,21 @@ class commentlist : BottomSheetDialogFragment(), OnBottomSheetCallbacks {
                 (activity as DetailActivity).openBottomSheet()
             }
         }
+        recylcercomment = recyclerComment
+
+        var commentList : MutableList<Comment> = ArrayList()
+
+        for (i in 1..5) {
+            commentList.add(Comment(profilePic = R.drawable.ic_vr, profileName = "Anonyme OnStage", comment = "Hello!!" ))
+            commentList.add(Comment(profilePic = R.drawable.profilepic, profileName = "Chiheb Chikhaoui", comment = "Nice!" ))
+        }
+
+
+        recylcercommentAdapter = commentAdapter(commentList)
+
+        recylcercomment.adapter = recylcercommentAdapter
+
+        recylcercomment.layoutManager = LinearLayoutManager(recylcercomment.context, LinearLayoutManager.VERTICAL,false)
 
     }
 
