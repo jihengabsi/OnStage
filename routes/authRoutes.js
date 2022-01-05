@@ -4,16 +4,26 @@ const jwt = require('jsonwebtoken')
 const{jwtkey} =require('../keys')
 const router = express.Router();
 const User = mongoose.model('User')
-const accountSid = 'AC43be5b8033cb98eec20f6ec69ff9cd39';
-const authToken = '9842461e7761b0428935f9df29991ac8';
+const accountSid = 'AC8fecfeedbbcae881405a99446b76b7e6';
+const authToken = 'd4c0743a12cec225061b0e03c3709320';
 const client = require('twilio')(accountSid, authToken);
 const SERVICE_PLAN_ID = 'ec7b8b0dd2174104a6dfb7057af6cee1';
 const API_TOKEN = '08e87930c8174fa7907450897b48caf0';
 const SINCH_NUMBER = '+447537455259';
 
 const fetch = require('cross-fetch');
+let nodemailer = require('nodemailer');
 
+let transporter = nodemailer.createTransport({
+
+  service:'gmail',
+  auth: {
+      user: 'onstageinterx@gmail.com',
+      pass: 'onStageInterX2022'
+  }
+});
 //signin
+/*
 router.post('/sendCode',async (req,res)=>{
   const {phone} = req.body
   const code=Math.floor(Math.random()*90000) + 10000
@@ -21,7 +31,7 @@ router.post('/sendCode',async (req,res)=>{
     client.messages
   .create({
      body: 'Your verification code is '+code,
-     from: '+19704425102',
+     from: '+12182926731',
      to: '+216'+phone
    })
   .then(message => {
@@ -33,12 +43,33 @@ router.post('/sendCode',async (req,res)=>{
       return res.status(422).send({error :"must provide email or password"})
   }
 })
+*/
+//sendMail
+router.post('/sendCode',async (req,res)=>{
+  const {email} = req.body
+  const code=Math.floor(Math.random()*90000) + 10000
+  let mailOptions = {
+    from: 'onstageinterx@gmail.com',
+    to: email,
+    subject: 'Verification Code',
+    text: 'Confirm your email address! Verification code:'+code
+};
+transporter.sendMail(mailOptions,(error,info)=>{
+  if (error) {
+      console.log(error);
+  } else {
+    console.log(code);
+    res.json(code)
+  }
+});
+    
+})
 //verifCode
 router.post('/verifCode',async (req,res)=>{
-  const {phone} = req.body
+  const {email} = req.body
   const code1 = req.body.code1
   const code2 = req.body.code2
-  const user = await User.findOne({phone})
+  const user = await User.findOne({email})
   try{
   if(code1!=code2){
     res.json({
@@ -50,7 +81,7 @@ router.post('/verifCode',async (req,res)=>{
       console.log("user not found");
       res.json({
         found: "user not found",
-        userId: user._id
+        userId: "null"
     })
   }
   else if(!user.name||!user.picture){
@@ -64,7 +95,9 @@ router.post('/verifCode',async (req,res)=>{
     console.log(user._id);
     res.json({
       found: "found",
-      userId: user._id
+      userId: user._id,
+      picture:user.picture,
+      name:user.name
   })
     
   }
@@ -84,7 +117,7 @@ router.post('/signup',async(req,res)=>{
   try{
   const user = new User({
     name:req.body.name,
-    phone:req.body.phone,
+    email:req.body.email,
     picture:req.body.picture  
     })
     await user.save()
@@ -95,7 +128,7 @@ router.post('/signup',async(req,res)=>{
     })
   }
   catch(err){
-    return res.status(422).send({error :"must provide email or password"})
+    return res.status(422).send(err)
 }
   
 })

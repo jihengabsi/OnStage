@@ -1,9 +1,19 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-const requireLogin  = require('../middleware/requireLogin')
 const Post =  mongoose.model("Post")
 const User = mongoose.model("User")
+
+//getAllUsers
+router.get('/allusers',(req,res)=>{
+    User.find()
+    .then((users)=>{
+        res.json({users})
+    }).catch(err=>{
+        console.log(err)
+    })
+    
+})
 
 
 //getUer
@@ -33,74 +43,28 @@ router.post('/getUser',(req,res)=>{
     })
 })
 
-
-router.put('/follow',requireLogin,(req,res)=>{
-    User.findByIdAndUpdate(req.body.followId,{
-        $push:{followers:req.user._id}
-    },{
-        new:true
-    },(err,result)=>{
-        if(err){
-            return res.status(422).json({error:err})
-        }
-      User.findByIdAndUpdate(req.user._id,{
-          $push:{following:req.body.followId}
-          
-      },{new:true}).select("-password").then(result=>{
-          res.json(result)
-      }).catch(err=>{
-          return res.status(422).json({error:err})
-      })
-
-    }
-    )
-})
-router.put('/unfollow',requireLogin,(req,res)=>{
-    User.findByIdAndUpdate(req.body.unfollowId,{
-        $pull:{followers:req.user._id}
-    },{
-        new:true
-    },(err,result)=>{
-        if(err){
-            return res.status(422).json({error:err})
-        }
-      User.findByIdAndUpdate(req.user._id,{
-          $pull:{following:req.body.unfollowId}
-          
-      },{new:true}).select("-password").then(result=>{
-          res.json(result)
-      }).catch(err=>{
-          return res.status(422).json({error:err})
-      })
-
-    }
-    )
-})
-
-
-router.put('/updatepic',requireLogin,(req,res)=>{
-    User.findByIdAndUpdate(req.user._id,{$set:{pic:req.body.pic}},{new:true},
-        (err,result)=>{
-         if(err){
-             return res.status(422).json({error:"pic canot post"})
-         }
-         res.json(result)
+router.post('/updateInfo',(req,res)=>{
+    User.findByIdAndUpdate(req.body._id,{
+        name:req.body.name,
+        currentPosition:req.body.currentPosition,
+        companyName:req.body.companyName,
+        currentlyWorking:req.body.currentlyWorking,
+        educationTitle:req.body.educationTitle,
+        school:req.body.school,
+        student:req.body.student
+        
+    }).then(data=>{
+        console.log(data)
+        res.send(data)
     })
-})
-
-
-
-router.post('/search-users',(req,res)=>{
-    let userPattern = new RegExp("^"+req.body.query)
-    User.find({email:{$regex:userPattern}})
-    .select("_id email")
-    .then(user=>{
-        res.json({user})
-    }).catch(err=>{
-        console.log(err)
+    .catch(err=>{
+      console.log(err)
     })
+  
+  })
 
-})
+
+
 
 
 

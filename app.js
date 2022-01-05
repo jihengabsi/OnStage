@@ -5,131 +5,109 @@ const bcrypt = require('bcryptjs')
 const saltRounds = 10;
 const socketio = require('socket.io');
 const http = require('http');
-const formatMessage = require('./models/Message');
+//const formatMessage = require('./models/Message');
 const app = express()
+var multer, storage, path, crypto;
+multer = require('multer')
+path = require('path');
+crypto = require('crypto');
 
-
-const hostname = '192.168.1.14';
-const port = 8000;
+const hostname = '192.168.1.13';
+const port = 8083;
 const {mongoUrl} = require('./keys')
 
 require('./models/Chat');  
 require('./models/User')
 require('./models/Post')
+require('./models/Todo')
+require('./models/Startup')
 app.use(express.json())
 app.use(require('./routes/authRoutes'))
 app.use(require('./routes/postRoutes'))
 app.use(require('./routes/userRoutes'))
-// app.use(require('./routes/chatRoutes'))
-const server = app.listen(port);
+app.use(require('./routes/chatRoutes'))
+app.use(require('./routes/todoRoutes'))
+app.use(require('./routes/startupRoutes'))
 app.use(express.static('public'));
-//const server = http.createServer(app);
-const io = socketio(server);
-const botName = 'ChatCord Bot';
+const Chat =  mongoose.model("Chat")
 
-io.on('connection', (socket) => {
-  console.log('a user connected');
-});
-/*
-io.on('connection', (socket) => {
-  console.log("New socket connection: " + socket.id)
-    socket.on('joinRoom', ({ username, room }) => {
-      const user = userJoin(socket.id, username, room);
-  
-      socket.join(user.room);
-  
-      // Welcome current user
-      socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
-  
-      // Broadcast when a user connects
-      socket.broadcast
-        .to(user.room)
-        .emit(
-          'message',
-          formatMessage(botName, `${user.username} has joined the chat`)
-        );
-  
-      // Send users and room info
-      io.to(user.room).emit('roomUsers', {
-        room: user.room,
-        users: getRoomUsers(user.room)
+const SocketServer = require('websocket').server
+const server = http.createServer((req, res) => {})
+server.listen(3000, ()=>{
+  console.log("Listening on port 3000...")
+})
+var fs = require('fs');
+
+storage = multer.diskStorage({
+    destination: './uploads/',
+    filename: function(req, file, cb) {
+      return crypto.pseudoRandomBytes(16, function(err, raw) {
+        if (err) {
+          return cb(err);
+        }
+        return cb(null, "" + (raw.toString('hex')) + (path.extname(file.originalname)));
       });
-    });
-  
-    // Listen for chatMessage
-    socket.on('chatMessage', msg => {
-      const user = getCurrentUser(socket.id);
-  
-      io.to(user.room).emit('message', formatMessage(user.username, msg));
-    });
-  
-    // Runs when client disconnects
-    socket.on('disconnect', () => {
-      const user = userLeave(socket.id);
-  
-      if (user) {
-        io.to(user.room).emit(
-          'message',
-          formatMessage(botName, `${user.username} has left the chat`)
-        );
-  
-        // Send users and room info
-        io.to(user.room).emit('roomUsers', {
-          room: user.room,
-          users: getRoomUsers(user.room)
-        });
-      }
-    });
+    }
   });
 
 
-/*
-app.get('/', (req, res) => {
+// Post files
+app.post(
+  "/upload",
+  multer({
+    storage: storage
+  }).single('upload'), function(req, res) {
+    console.log(req.file);
+    console.log(req.body);
+    res.redirect("/uploads/" + req.file.filename);
+    console.log(req.file.filename.split(".")[0]);
+    return res.status(200).end();
+  });
 
-    res.send('Chat Server is running on port 3000')
-    });
+app.get('/uploads/:upload', function (req, res){
+  file = req.params.upload;
+  console.log(req.params.upload);
+  var img = fs.readFileSync(__dirname + "/uploads/" + file);
+  res.writeHead(200, {'Content-Type': 'image/png' });
+  res.end(img, 'binary');
 
-    io.on('connection', (socket) => {
-    
-    console.log('user connected')
-    
-    socket.on('join', function(userNickname) {
-    
-            console.log(userNickname +" : has joined the chat "  );
-    
-            socket.broadcast.emit('userjoinedthechat',userNickname +" : has joined the chat ");
+});
+
+wsServer = new SocketServer({httpServer:server})
+
+const connections = []
+
+wsServer.on('request', (req) => {
+    const connection = req.accept()
+    console.log('new connection')
+    connections.push(connection)
+
+    connection.on('message', (mes) => {
+        connections.forEach(element => {
+            if (element != connection){
+                element.sendUTF(mes.utf8Data)
+            
+            }
+          
+               
         })
-    
-    
-    socket.on('messagedetection', (senderNickname,messageContent) => {
-    
-           //log the message in console 
-    
-           console.log(senderNickname+" : " +messageContent)
-    
-          //create a message object 
-    
-          let  message = {"message":messageContent, "senderNickname":senderNickname}
-    
-           // send the message to all users including the sender  using io.emit() 
-    
-          io.emit('message', message )
-    
-          })
-    
-    socket.on('disconnect', function() {
-    
-            console.log(userNickname +' has left ')
-    
-            socket.broadcast.emit( "userdisconnect" ,' user has left')
-    
-    
-    
-    
-        })    
+        var msg = JSON.parse(mes.utf8Data);
+        const chat = new Chat({
+          sender:msg.sender,
+          receiver:msg.receiver,
+          message:msg.message,
+        })
+         chat.save()
+          console.log(chat)
     })
-    
-*/
+
+    connection.on('close', (resCode, des) => {
+        console.log('connection closed')
+        connections.splice(connections.indexOf(connection), 1)
+    })
+
+})
+
 mongoose.connect(mongoUrl,{
     useFindAndModify: false,
     useNewUrlParser:true,
@@ -143,13 +121,6 @@ mongoose.connection.on("error",(err)=>{
     console.log("error",err)
 })
 
-/*
-server.listen(port,()=>{
-
-    console.log('Node app is running on port 3000')
-    
-    })
-    */
     
 app.listen(port,hostname,() =>{
 console.log("server running"+port)

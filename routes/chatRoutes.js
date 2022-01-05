@@ -1,67 +1,34 @@
 const express = require('express')
+const router = express.Router()
+const mongoose = require('mongoose')
+const Chat =  mongoose.model("Chat")
 
-const socketio = require('socket.io');
-const http = require('http');
-const formatMessage = require('../models/Message');
-const {
-  userJoin,
-  getCurrentUser,
-  userLeave,
-  getRoomUsers
-} = require('../models/Chat');
+router.post('/sendMsg',async(req,res)=>{
 
-const app = express()
+  try{
+  const chat = new Chat({
+    sender:req.body.sender,
+    receiver:req.body.receiver,
+    message:req.body.message,
+  })
+  await chat.save()
+  .then(result=>{
+      res.json({chat:result})
+  })
+}
+catch(err){
+  return res.status(422).send({err})
+}
+})
 
-const server = http.createServer(app);
-const io = socketio(server);
-const botName = 'ChatCord Bot';
-// Run when client connects
-io.on('connection', socket => {
-    socket.on('joinRoom', ({ username, room }) => {
-      const user = userJoin(socket.id, username, room);
+router.post('/msgSent',(req,res)=>{
+  Chat.find({sender:{$in:req.body.sender}}&&{receiver:{$in:req.body.receiver}}) 
+  .then((chats)=>{
+      res.json({chats})
+  }).catch(err=>{
+      console.log(err)
+  })
   
-      socket.join(user.room);
-  
-      // Welcome current user
-      socket.emit('message', formatMessage(botName, 'Welcome to ChatCord!'));
-  
-      // Broadcast when a user connects
-      socket.broadcast
-        .to(user.room)
-        .emit(
-          'message',
-          formatMessage(botName, `${user.username} has joined the chat`)
-        );
-  
-      // Send users and room info
-      io.to(user.room).emit('roomUsers', {
-        room: user.room,
-        users: getRoomUsers(user.room)
-      });
-    });
-  
-    // Listen for chatMessage
-    socket.on('chatMessage', msg => {
-      const user = getCurrentUser(socket.id);
-  
-      io.to(user.room).emit('message', formatMessage(user.username, msg));
-    });
-  
-    // Runs when client disconnects
-    socket.on('disconnect', () => {
-      const user = userLeave(socket.id);
-  
-      if (user) {
-        io.to(user.room).emit(
-          'message',
-          formatMessage(botName, `${user.username} has left the chat`)
-        );
-  
-        // Send users and room info
-        io.to(user.room).emit('roomUsers', {
-          room: user.room,
-          users: getRoomUsers(user.room)
-        });
-      }
-    });
-  });
+})
+
+module.exports = router

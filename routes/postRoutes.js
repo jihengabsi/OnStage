@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-const requireLogin  = require('../middleware/requireLogin')
 const Post =  mongoose.model("Post")
 
 
@@ -18,19 +17,18 @@ router.get('/allpost',(req,res)=>{
     
 })
 
-router.get('/getsubpost',(req,res)=>{
+router.post('/searchPosts',(req,res,next)=>{
+    const searchedField = req.body.name;
+    Post.find({$or: [
+        {
+      $and: [{title:{$regex: `${searchedField}`,$options: '$i'},description:{$regex: `${searchedField}`,$options: '$i'}}]
+    
+    } ]
+})
+        .then(posts=>{
+            res.send({posts});
+        })
 
-    // if postedBy in following
-    Post.find({postedBy:{$in:req.user.following}})
-    .populate("postedBy","_id name")
-    .populate("comments.postedBy","_id name")
-    .sort('-createdAt')
-    .then(posts=>{
-        res.json({posts})
-    })
-    .catch(err=>{
-        console.log(err)
-    })
 })
 
 router.post('/createpost',async(req,res)=>{
@@ -47,6 +45,7 @@ router.post('/createpost',async(req,res)=>{
     })
     await post.save()
     .then(result=>{
+        console.log(result)
         res.json({post:result})
     })
 }
@@ -56,7 +55,7 @@ catch(err){
 })
 
 router.get('/mypost',(req,res)=>{
-    Post.find({postedBy:req.user._id})
+    Post.find({postedBy:req.body._id})
     .populate("PostedBy","_id name")
     .then(mypost=>{
         res.json({mypost})
@@ -92,12 +91,25 @@ router.put('/unlike',(req,res)=>{
         }
     })
 })
+router.post('/getComments',async(req,res)=>{
+    const {_id} = req.body
+    const post = await Post.findOne({_id})
+    try{
+      res.json({
+      comments: post.comments
+  })
+    }
+    catch(err){
+    return res.status(422).send({error :"error"})
+}
+})
 
-
-router.put('/comment',(req,res)=>{
+router.put('/addComment',(req,res)=>{
     const comment = {
         text:req.body.text,
-        postedBy:req.body.user_id
+        postedBy:req.body.user_id,
+        username:req.body.username,
+        userpicture:req.body.userpicture
     }
     Post.findByIdAndUpdate(req.body.postId,{
         $push:{comments:comment}
@@ -110,13 +122,14 @@ router.put('/comment',(req,res)=>{
         if(err){
             return res.status(422).json({error:err})
         }else{
+           console.log(result)
             res.json(result)
         }
     })
 })
 
-router.delete('/deletepost/:postId',requireLogin,(req,res)=>{
-    Post.findOne({_id:req.params.postId})
+router.delete('/deletepost/:postId',(req,res)=>{
+    Post.findOne({_id:req.body.postId})
     .populate("postedBy","_id")
     .exec((err,post)=>{
         if(err || !post){
