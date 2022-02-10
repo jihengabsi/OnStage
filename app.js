@@ -15,7 +15,6 @@ path = require('path');
 crypto = require('crypto');
 
 const hostname = '192.168.1.15';
-const port = 8083;
 const {mongoUrl} = require('./keys')
 
 require('./models/Chat');  
@@ -32,7 +31,7 @@ app.use(require('./routes/todoRoutes'))
 app.use(require('./routes/startupRoutes'))
 app.use(express.static('public'));
 const Chat =  mongoose.model("Chat")
-
+var PORT = process.env.PORT || 5000;
 const SocketServer = require('websocket').server
 const server = http.createServer((req, res) => {})
 server.listen(3000, ()=>{
@@ -109,6 +108,6 @@ mongoose.connection.on("error",(err)=>{
 })
 
     
-app.listen(port,hostname,() =>{
+app.listen(PORT,hostname,() =>{
 console.log("server running"+port)
 })
