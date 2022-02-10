@@ -109,5 +109,5 @@ mongoose.connection.on("error",(err)=>{
 
     
 app.listen(PORT,hostname,() =>{
-console.log("server running"+port)
+console.log("server running"+PORT)
 })
