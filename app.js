@@ -108,6 +108,6 @@ mongoose.connection.on("error",(err)=>{
 })
 
     
-app.listen(PORT,hostname,() =>{
+app.listen(PORT,() =>{
 console.log("server running"+PORT)
 })
