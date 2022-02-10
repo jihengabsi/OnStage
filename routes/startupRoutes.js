@@ -4,7 +4,15 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const Startup =  mongoose.model("Startup")
 
-
+/**
+ * @swagger
+ * /allStartup:
+ *  get:
+ *    description: Use to get all startups
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.get('/allStartup',(req,res)=>{
     Startup.find()
     .then((startups)=>{
@@ -14,6 +22,15 @@ router.get('/allStartup',(req,res)=>{
     })
     
 })
+/**
+ * @swagger
+ * /rate:
+ *  put:
+ *    description: Use to rate a startup
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.put('/rate',(req,res)=>{
     const rate = {
         rate:req.body.rate,
@@ -34,7 +51,15 @@ router.put('/rate',(req,res)=>{
     })
   
   })
-  
+  /**
+ * @swagger
+ * /addStartup:
+ *  post:
+ *    description: Use to add a startup
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.post('/addStartup',async(req,res)=>{
     try{
         const startup = new Startup({

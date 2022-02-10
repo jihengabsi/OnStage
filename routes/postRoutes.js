@@ -2,7 +2,15 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const Post =  mongoose.model("Post")
-
+/**
+ * @swagger
+ * /allpost:
+ *  get:
+ *    description: Use to get all posts
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 
 router.get('/allpost',(req,res)=>{
     Post.find()
@@ -16,7 +24,15 @@ router.get('/allpost',(req,res)=>{
     })
     
 })
-
+/**
+ * @swagger
+ * /searchPosts:
+ *  post:
+ *    description: Use to search posts
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.post('/searchPosts',(req,res,next)=>{
     const searchedField = req.body.name;
     Post.find({$or: [
@@ -30,7 +46,15 @@ router.post('/searchPosts',(req,res,next)=>{
         })
 
 })
-
+/**
+ * @swagger
+ * /createpost:
+ *  post:
+ *    description: Use to add a post
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.post('/createpost',async(req,res)=>{
     const {title,description,pic} = req.body 
     if(!title ){
@@ -53,17 +77,15 @@ catch(err){
     return res.status(422).send({err})
 }
 })
-
-router.get('/mypost',(req,res)=>{
-    Post.find({postedBy:req.body._id})
-    .populate("PostedBy","_id name")
-    .then(mypost=>{
-        res.json({mypost})
-    })
-    .catch(err=>{
-        console.log(err)
-    })
-})
+/**
+ * @swagger
+ * /like:
+ *  put:
+ *    description: Use to like a post
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 
 router.put('/like',(req,res)=>{
     Post.findByIdAndUpdate(req.body.postId,{
@@ -78,6 +100,15 @@ router.put('/like',(req,res)=>{
         }
     })
 })
+/**
+ * @swagger
+ * /unlike:
+ *  put:
+ *    description: Use to unlike a post
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.put('/unlike',(req,res)=>{
     Post.findByIdAndUpdate(req.body.postId,{
         $pull:{likes:req.body.user_id}
@@ -91,6 +122,15 @@ router.put('/unlike',(req,res)=>{
         }
     })
 })
+/**
+ * @swagger
+ * /getComments:
+ *  post:
+ *    description: Use to get all comments of a post
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.post('/getComments',async(req,res)=>{
     const {_id} = req.body
     const post = await Post.findOne({_id})
@@ -103,7 +143,15 @@ router.post('/getComments',async(req,res)=>{
     return res.status(422).send({error :"error"})
 }
 })
-
+/**
+ * @swagger
+ * /addComment:
+ *  put:
+ *    description: Use to add a comment
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.put('/addComment',(req,res)=>{
     const comment = {
         text:req.body.text,
@@ -128,22 +176,5 @@ router.put('/addComment',(req,res)=>{
     })
 })
 
-router.delete('/deletepost/:postId',(req,res)=>{
-    Post.findOne({_id:req.body.postId})
-    .populate("postedBy","_id")
-    .exec((err,post)=>{
-        if(err || !post){
-            return res.status(422).json({error:err})
-        }
-        if(post.postedBy._id.toString() === req.user._id.toString()){
-              post.remove()
-              .then(result=>{
-                  res.json(result)
-              }).catch(err=>{
-                  console.log(err)
-              })
-        }
-    })
-})
 
 module.exports = router

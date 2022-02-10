@@ -2,7 +2,15 @@ const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
 const Todo =  mongoose.model("Todo")
-
+/**
+ * @swagger
+ * /alltodo:
+ *  get:
+ *    description: Use to get all todo
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 
 router.get('/alltodo',(req,res)=>{
     Todo.find()
@@ -13,6 +21,15 @@ router.get('/alltodo',(req,res)=>{
     })
     
 })
+  /**
+ * @swagger
+ * /addTodo:
+ *  post:
+ *    description: Use to add a todo
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
 router.post('/addTodo',async(req,res)=>{
     try{
         const todo = new Todo({
@@ -29,7 +46,15 @@ router.post('/addTodo',async(req,res)=>{
         return res.status(422).send({err})
     }
     })
-
+  /**
+ * @swagger
+ * /deletetodo:
+ *  delete:
+ *    description: Use to delete a todo
+ *    responses:
+ *      '200':
+ *        description: A successful response
+ */
     router.delete('/deletetodo',(req,res)=>{
         Todo.findOne({_id:req.body.todoId})
         .exec((err,todo)=>{
