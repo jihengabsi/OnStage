@@ -1,12 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const jwt = require('jsonwebtoken')
-const{jwtkey} =require('../keys')
 const router = express.Router();
 const User = mongoose.model('User')
-const accountSid = 'AC8fecfeedbbcae881405a99446b76b7e6';
-const authToken = 'd4c0743a12cec225061b0e03c3709320';
-
+const jwt = require('jsonwebtoken')
 let nodemailer = require('nodemailer');
 
 let transporter = nodemailer.createTransport({
@@ -30,6 +26,7 @@ let transporter = nodemailer.createTransport({
  */
 router.post('/sendCode',async (req,res)=>{
   const {email} = req.body
+
   const code=Math.floor(Math.random()*90000) + 10000
   let mailOptions = {
     from: 'onstageinterx@gmail.com',
@@ -45,7 +42,7 @@ transporter.sendMail(mailOptions,(error,info)=>{
     res.json(code)
   }
 });
-    
+
 })
 /**
  * @swagger
@@ -62,6 +59,7 @@ router.post('/verifCode',async (req,res)=>{
   const code2 = req.body.code2
   const user = await User.findOne({email})
   try{
+
   if(code1!=code2){
     res.json({
       found: "fail"
@@ -82,15 +80,20 @@ router.post('/verifCode',async (req,res)=>{
       userId: user._id
   })
   }
-  else{
+  else if(user){
     console.log(user._id);
+    const token = jwt.sign({email:email},"SECRET")
+    if(token){
     res.json({
       found: "found",
       userId: user._id,
       picture:user.picture,
-      name:user.name
+      name:user.name,
+      token:token
   })
-    
+} else{
+  res.json({message:"Authentification Failed",succes:false})
+} 
   }
     
   }

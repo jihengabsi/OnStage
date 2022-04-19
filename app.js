@@ -1,20 +1,16 @@
 const express = require('express')
-const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-const bcrypt = require('bcryptjs')
-const saltRounds = 10;
-const socketio = require('socket.io');
-const http = require('http');
-const swaggerJsDoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
 
+const http = require('http');
+//const formatMessage = require('./models/Message');
 const app = express()
 var multer, storage, path, crypto;
 multer = require('multer')
 path = require('path');
 crypto = require('crypto');
 
-const hostname = '192.168.1.15';
+const hostname = 'localhost';
+const port = 8083;
 const {mongoUrl} = require('./keys')
 
 require('./models/Chat');  
@@ -31,33 +27,48 @@ app.use(require('./routes/todoRoutes'))
 app.use(require('./routes/startupRoutes'))
 app.use(express.static('public'));
 const Chat =  mongoose.model("Chat")
-var PORT = process.env.PORT || 5000;
+
 const SocketServer = require('websocket').server
 const server = http.createServer((req, res) => {})
 server.listen(3000, ()=>{
   console.log("Listening on port 3000...")
 })
 var fs = require('fs');
-// Extended: https://swagger.io/specification/#infoObject
-const swaggerOptions = {
-  swaggerDefinition: {
-    info: {
-      version: "1.0.0",
-      title: "OnStage API",
-      description: "Onstage API Information",
-      contact: {
-        name: "interX"
-      },
-      servers: ["http://192.168.1.13:8083"]
+
+storage = multer.diskStorage({
+    destination: './uploads/',
+    filename: function(req, file, cb) {
+      return crypto.pseudoRandomBytes(16, function(err, raw) {
+        if (err) {
+          return cb(err);
+        }
+        return cb(null, "" + (raw.toString('hex')) + (path.extname(file.originalname)));
+      });
     }
-  },
-  // ['.routes/*.js']
-  apis: ["./routes/*.js"]
-};
+  });
 
-const swaggerDocs = swaggerJsDoc(swaggerOptions);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+// Post files
+app.post(
+  "/upload",
+  multer({
+    storage: storage
+  }).single('upload'), function(req, res) {
+    console.log(req.file);
+    console.log(req.body);
+    res.redirect("/uploads/" + req.file.filename);
+    console.log(req.file.filename.split(".")[0]);
+    return res.status(200).end();
+  });
+
+app.get('/uploads/:upload', function (req, res){
+  file = req.params.upload;
+  console.log(req.params.upload);
+  var img = fs.readFileSync(__dirname + "/uploads/" + file);
+  res.writeHead(200, {'Content-Type': 'image/png' });
+  res.end(img, 'binary');
+
+});
 
 wsServer = new SocketServer({httpServer:server})
 
@@ -108,6 +119,6 @@ mongoose.connection.on("error",(err)=>{
 })
 
     
-app.listen(PORT,() =>{
-console.log("server running"+PORT)
+app.listen(port,hostname,() =>{
+console.log("server running"+port)
 })
