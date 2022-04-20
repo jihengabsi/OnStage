@@ -67,16 +67,8 @@ transporter.sendMail(mailOptions,(error,info)=>{
 //verifCode
 router.post('/verifCode',async (req,res)=>{
   const {email} = req.body
-  const code1 = req.body.code1
-  const code2 = req.body.code2
   const user = await User.findOne({email})
   try{
-  if(code1!=code2){
-    res.json({
-      found: "fail"
-  })
-  }
-  else{
     if(!user){
       console.log("user not found");
       res.json({
@@ -101,9 +93,6 @@ router.post('/verifCode',async (req,res)=>{
   })
     
   }
-    
-  }
-
 }
   catch(err){
     return res.status(422).send({error :"error"})
