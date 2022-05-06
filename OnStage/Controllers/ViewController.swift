@@ -11,7 +11,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var OTPbtn: UIButton!
     @IBOutlet weak var Email: UITextField!
     @IBOutlet weak var profileImage: UIImageView!
-    
+    @IBOutlet weak var imageBtn: UIButton!
+    var profilePicture: Any?
     
     
     
@@ -30,6 +31,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func OTPButton(_ sender: Any) {
+        let secondVC = self.storyboard?.instantiateViewController(withIdentifier: "MainStory") as? UITabBarController
+            self.present(secondVC!, animated: false, completion: nil)
+    }
+    @IBAction func editImage(_ sender: Any) {
+        ImagePickerManager().pickImage(self){image in
+                  self.profilePicture = image
+                  self.profileImage.image = image
+        
+              }
     }
     
 }

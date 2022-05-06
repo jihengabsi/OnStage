@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C63F33A71B73EF9CE8391AC /* Pods_OnStage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A734C0FCE12E3D26BDF194 /* Pods_OnStage.framework */; };
+		C60745B5280FA25D00E23669 /* verifCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C60745B4280FA25D00E23669 /* verifCodeController.swift */; };
 		C6233AE92806295200693ED0 /* TED.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C6233AE82806295200693ED0 /* TED.mp4 */; };
 		C6233AEB28062B0300693ED0 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6233AEA28062B0300693ED0 /* VideosViewController.swift */; };
 		C6233AED280634FF00693ED0 /* VideoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6233AEC280634FF00693ED0 /* VideoCollectionViewCell.swift */; };
-		C6B8D7FE27FFE99A00C8AF5E /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8D7FD27FFE99900C8AF5E /* AddPostViewController.swift */; };
+		C635F58C2821EFCF00714F8C /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C635F58B2821EFCF00714F8C /* ImagePickerManager.swift */; };
+		C635F58E2821F24400714F8C /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C635F58D2821F24400714F8C /* Alert.swift */; };
+		C635F5922821F50200714F8C /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C635F5912821F50100714F8C /* AddPostViewController.swift */; };
+		C6820DE728214D950047AF58 /* ModifProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6820DE628214D950047AF58 /* ModifProfileViewController.swift */; };
+		C690AEFC280F0D8C003B3ABB /* APIManagaer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690AEFB280F0D8C003B3ABB /* APIManagaer.swift */; };
+		C690AEFF280F0EE1003B3ABB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C690AEFE280F0EE1003B3ABB /* Alamofire */; };
+		C690AF01280F1153003B3ABB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690AF00280F1153003B3ABB /* UserModel.swift */; };
+		C690AF03280F1211003B3ABB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690AF02280F1211003B3ABB /* Constant.swift */; };
+		C690AF05280F1A35003B3ABB /* sendCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C690AF04280F1A35003B3ABB /* sendCodeController.swift */; };
 		C6B8D800280029B200C8AF5E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B8D7FF280029B200C8AF5E /* NewsViewController.swift */; };
 		C6C9984727FF145600311211 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9984627FF145600311211 /* AppDelegate.swift */; };
 		C6C9984927FF145600311211 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9984827FF145600311211 /* SceneDelegate.swift */; };
@@ -42,10 +52,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		355BC1D8E976D841A3F9DF0C /* Pods-OnStage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnStage.debug.xcconfig"; path = "Target Support Files/Pods-OnStage/Pods-OnStage.debug.xcconfig"; sourceTree = "<group>"; };
+		77A734C0FCE12E3D26BDF194 /* Pods_OnStage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OnStage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E6063B9B90C341D1C92D010 /* Pods-OnStage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnStage.release.xcconfig"; path = "Target Support Files/Pods-OnStage/Pods-OnStage.release.xcconfig"; sourceTree = "<group>"; };
+		C60745B4280FA25D00E23669 /* verifCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = verifCodeController.swift; sourceTree = "<group>"; };
 		C6233AE82806295200693ED0 /* TED.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = TED.mp4; sourceTree = "<group>"; };
 		C6233AEA28062B0300693ED0 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
 		C6233AEC280634FF00693ED0 /* VideoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCollectionViewCell.swift; sourceTree = "<group>"; };
-		C6B8D7FD27FFE99900C8AF5E /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		C635F58B2821EFCF00714F8C /* ImagePickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		C635F58D2821F24400714F8C /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = ../../../../../Downloads/ios/OnStage/OnStage/View/Alert.swift; sourceTree = "<group>"; };
+		C635F5912821F50100714F8C /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		C6820DE628214D950047AF58 /* ModifProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifProfileViewController.swift; sourceTree = "<group>"; };
+		C690AEFB280F0D8C003B3ABB /* APIManagaer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagaer.swift; sourceTree = "<group>"; };
+		C690AF00280F1153003B3ABB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		C690AF02280F1211003B3ABB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C690AF04280F1A35003B3ABB /* sendCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sendCodeController.swift; sourceTree = "<group>"; };
 		C6B8D7FF280029B200C8AF5E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		C6C9984327FF145500311211 /* OnStage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnStage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C9984627FF145600311211 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C690AEFF280F0EE1003B3ABB /* Alamofire in Frameworks */,
+				1C63F33A71B73EF9CE8391AC /* Pods_OnStage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +111,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA4F202674E5AFCC0B48098 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77A734C0FCE12E3D26BDF194 /* Pods_OnStage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3AF9BD7FDD5638CE707AC88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				355BC1D8E976D841A3F9DF0C /* Pods-OnStage.debug.xcconfig */,
+				7E6063B9B90C341D1C92D010 /* Pods-OnStage.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C690AEF6280F0C9F003B3ABB /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				C690AEFB280F0D8C003B3ABB /* APIManagaer.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		C690AEF7280F0CDB003B3ABB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C690AF00280F1153003B3ABB /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C690AEF8280F0D09003B3ABB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C6233AEA28062B0300693ED0 /* VideosViewController.swift */,
+				C6B8D7FF280029B200C8AF5E /* NewsViewController.swift */,
+				C635F5912821F50100714F8C /* AddPostViewController.swift */,
+				C635F58D2821F24400714F8C /* Alert.swift */,
+				C635F58B2821EFCF00714F8C /* ImagePickerManager.swift */,
+				C6233AEC280634FF00693ED0 /* VideoCollectionViewCell.swift */,
+				C6C9984A27FF145600311211 /* ViewController.swift */,
+				C690AF04280F1A35003B3ABB /* sendCodeController.swift */,
+				C60745B4280FA25D00E23669 /* verifCodeController.swift */,
+				C6820DE628214D950047AF58 /* ModifProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C690AEFA280F0D66003B3ABB /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				C690AF02280F1211003B3ABB /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		C6C9983A27FF145500311211 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +176,8 @@
 				C6C9985F27FF146100311211 /* OnStageTests */,
 				C6C9986927FF146100311211 /* OnStageUITests */,
 				C6C9984427FF145500311211 /* Products */,
+				B3AF9BD7FDD5638CE707AC88 /* Pods */,
+				2EA4F202674E5AFCC0B48098 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,19 +194,18 @@
 		C6C9984527FF145500311211 /* OnStage */ = {
 			isa = PBXGroup;
 			children = (
+				C690AEFA280F0D66003B3ABB /* Constant */,
+				C690AEF8280F0D09003B3ABB /* Controllers */,
+				C690AEF7280F0CDB003B3ABB /* Model */,
+				C690AEF6280F0C9F003B3ABB /* APIManager */,
 				C6C9984627FF145600311211 /* AppDelegate.swift */,
 				C6C9984827FF145600311211 /* SceneDelegate.swift */,
-				C6C9984A27FF145600311211 /* ViewController.swift */,
 				C6233AE82806295200693ED0 /* TED.mp4 */,
 				C6C9984C27FF145600311211 /* Main.storyboard */,
 				C6C9985227FF145E00311211 /* Assets.xcassets */,
 				C6C9985427FF145F00311211 /* LaunchScreen.storyboard */,
 				C6C9985727FF145F00311211 /* Info.plist */,
 				C6C9984F27FF145600311211 /* OnStage.xcdatamodeld */,
-				C6B8D7FD27FFE99900C8AF5E /* AddPostViewController.swift */,
-				C6B8D7FF280029B200C8AF5E /* NewsViewController.swift */,
-				C6233AEA28062B0300693ED0 /* VideosViewController.swift */,
-				C6233AEC280634FF00693ED0 /* VideoCollectionViewCell.swift */,
 			);
 			path = OnStage;
 			sourceTree = "<group>";
@@ -152,15 +234,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6C9987027FF146200311211 /* Build configuration list for PBXNativeTarget "OnStage" */;
 			buildPhases = (
+				E9E6DC8299FD2F58971D0040 /* [CP] Check Pods Manifest.lock */,
 				C6C9983F27FF145500311211 /* Sources */,
 				C6C9984027FF145500311211 /* Frameworks */,
 				C6C9984127FF145500311211 /* Resources */,
+				3E8286433F068079866B18C8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = OnStage;
+			packageProductDependencies = (
+				C690AEFE280F0EE1003B3ABB /* Alamofire */,
+			);
 			productName = OnStage;
 			productReference = C6C9984327FF145500311211 /* OnStage.app */;
 			productType = "com.apple.product-type.application";
@@ -233,6 +320,9 @@
 				Base,
 			);
 			mainGroup = C6C9983A27FF145500311211;
+			packageReferences = (
+				C690AEFD280F0EE1003B3ABB /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C6C9984427FF145500311211 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -272,18 +362,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E8286433F068079866B18C8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnStage/Pods-OnStage-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OnStage/Pods-OnStage-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OnStage/Pods-OnStage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9E6DC8299FD2F58971D0040 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OnStage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C6C9983F27FF145500311211 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C6C9984B27FF145600311211 /* ViewController.swift in Sources */,
-				C6B8D7FE27FFE99A00C8AF5E /* AddPostViewController.swift in Sources */,
+				C6820DE728214D950047AF58 /* ModifProfileViewController.swift in Sources */,
+				C690AEFC280F0D8C003B3ABB /* APIManagaer.swift in Sources */,
 				C6C9985127FF145600311211 /* OnStage.xcdatamodeld in Sources */,
+				C635F5922821F50200714F8C /* AddPostViewController.swift in Sources */,
+				C690AF05280F1A35003B3ABB /* sendCodeController.swift in Sources */,
 				C6233AEB28062B0300693ED0 /* VideosViewController.swift in Sources */,
 				C6B8D800280029B200C8AF5E /* NewsViewController.swift in Sources */,
 				C6C9984727FF145600311211 /* AppDelegate.swift in Sources */,
 				C6233AED280634FF00693ED0 /* VideoCollectionViewCell.swift in Sources */,
+				C690AF03280F1211003B3ABB /* Constant.swift in Sources */,
+				C635F58C2821EFCF00714F8C /* ImagePickerManager.swift in Sources */,
+				C690AF01280F1153003B3ABB /* UserModel.swift in Sources */,
+				C60745B5280FA25D00E23669 /* verifCodeController.swift in Sources */,
+				C635F58E2821F24400714F8C /* Alert.swift in Sources */,
 				C6C9984927FF145600311211 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,6 +596,7 @@
 		};
 		C6C9987127FF146200311211 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 355BC1D8E976D841A3F9DF0C /* Pods-OnStage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +624,7 @@
 		};
 		C6C9987227FF146200311211 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6063B9B90C341D1C92D010 /* Pods-OnStage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -620,6 +762,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C690AEFD280F0EE1003B3ABB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C690AEFE280F0EE1003B3ABB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C690AEFD280F0EE1003B3ABB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C6C9984F27FF145600311211 /* OnStage.xcdatamodeld */ = {
